@@ -1,0 +1,12 @@
+<p>
+  Posts
+</p>
+<ul *ngFor="let currentForSale of masterForSaleList">
+  <li (click)="showDetails(currentForSale)">{{currentForSale.name}}
+    <ul *ngIf="currentForSale.active">
+      <li>{{currentForSale.body}}</li>
+      <li>{{currentForSale.date}}</li>
+      <li>{{currentForSale.email}}</li>
+    </ul>
+  </li>
+</ul>

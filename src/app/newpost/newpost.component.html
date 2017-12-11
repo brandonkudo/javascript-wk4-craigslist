@@ -1,0 +1,11 @@
+<div id="add-post" *ngIf="clickNew()">
+  <label>New Post</label>
+  <div class="form">
+    <input type="text" #newName placeholder="name">
+    <input type="text" #newBody placeholder="body">
+    <input type="text" #newDate placeholder="date">
+    <input type="text" #newEmail placeholder="email">
+    <button type="button" (click)="submitForm(newName.value, newBody.value, newDate.value, newEmail.value)" (click)="exitPostFormClicked()">Submit Keg</button>
+    <button type="button" (click)="exitPostFormClicked()">Close</button>
+  </div>
+</div>

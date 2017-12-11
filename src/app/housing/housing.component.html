@@ -1,0 +1,12 @@
+<p>Posts</p>
+<ul *ngFor="let currentHousing of masterHousingList">
+  <li (click)="showDetails(currentHousing)">{{currentHousing.name}}
+    <ul *ngIf="currentHousing.active">
+      <li>{{currentHousing.body}}</li>
+      <li>{{currentHousing.date}}</li>
+      <li>{{currentHousing.email}}</li>
+    </ul>
+  </li>
+</ul>
+<button (click)="clickNew()" type="button" name="button">Add New Post</button>
+<app-newpost (newPostSender)="submitForm($event)"></app-newpost>

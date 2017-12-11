@@ -1,0 +1,11 @@
+<p>Posts</p>
+<ul *ngFor="let currentPersonal of masterPersonalsList">
+<li (click)="showDetails(currentPersonal)">{{currentPersonal.name}}
+  <ul *ngIf="currentPersonal.active">
+    <li>{{currentPersonal.body}}</li>
+    <li>{{currentPersonal.date}}</li>
+    <li>{{currentPersonal.email}}</li>
+  </ul>
+</li>
+
+</ul>
